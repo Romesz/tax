@@ -11,4 +11,4 @@
 * cd ./dist && http-server
 
 ## Lint
-npm run lint
+* npm run lint
