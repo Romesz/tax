@@ -1,0 +1,16 @@
+:host {
+    font-family: 'roboto', Times, serif;
+}
+
+header, section {
+    width: 240px;
+    margin: auto;
+}
+
+.result {
+    color: #299829;
+}
+
+.error {
+    color: #e01515;
+}
