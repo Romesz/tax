@@ -1,0 +1,13 @@
+{
+    "VATs": [
+        10,
+        13,
+        20
+    ],
+    "calcTypes": [
+        "Gross",
+        "Net"
+    ],
+    "VATdefault": 10,
+    "calcDefault": "Net"
+}

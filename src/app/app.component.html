@@ -7,23 +7,26 @@
     <input type="number" placeholder="provide the amount" min="1" [(ngModel)]="inputValue" pInputText>
   </div>
   <div class="ui-g-12">
-    <div class="ui-g-12">
-      <p-radioButton name="calcType" label="Net" value="net" [(ngModel)]="calcType"></p-radioButton>
-    </div>
-    <div class="ui-g-12">
-      <p-radioButton name="calcType" label="Gross" value="gross" [(ngModel)]="calcType"></p-radioButton>
+    <div *ngFor="let type of calcTypes">
+      <div class="ui-g-12">
+        <p-radioButton name="groupname"
+                       label="{{type}}"
+                       value="{{type}}"
+                       [(ngModel)]="calcType">
+        </p-radioButton>
+      </div>
     </div>
   </div>
   <div class="ui-g-12">
     <label>VAT rate:</label>
-    <div class="ui-g-12">
-      <p-radioButton name="groupname" label="10%" value="10" [(ngModel)]="VATvalue"></p-radioButton>
-    </div>
-    <div class="ui-g-12">
-      <p-radioButton name="groupname" label="13%" value="13" [(ngModel)]="VATvalue"></p-radioButton>
-    </div>
-    <div class="ui-g-12">
-      <p-radioButton name="groupname" label="20%" value="20" [(ngModel)]="VATvalue"></p-radioButton>
+    <div *ngFor="let vat of VATs">
+      <div class="ui-g-12">
+        <p-radioButton name="VATs"
+                       label="{{vat}}%"
+                       value="{{vat}}"
+                       [(ngModel)]="VATvalue">
+        </p-radioButton>
+      </div>
     </div>
   </div>
   <div class="ui-g-12 ui-md-12">

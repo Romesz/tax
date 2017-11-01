@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
+import { VatService } from './services/vat-service';
 
 import {
   InputTextModule,
@@ -15,13 +17,14 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
+    HttpModule,
     FormsModule,
     BrowserModule,
     InputTextModule,
     ButtonModule,
     RadioButtonModule
   ],
-  providers: [],
+  providers: [VatService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
